@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+
+container{
+    background-image: image("fioletowe-tlo")
+}
+
+header{
+  background-color: #45ebb2;
+    text-align: center;
+}
+
+input{
+    height: 3.5rem;
+    width: auto;
+}
