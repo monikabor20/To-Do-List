@@ -2,17 +2,56 @@
     box-sizing: border-box;
 }
 
-
-container{
-    background-image: image("fioletowe-tlo")
+body {
+    background: linear-gradient(to left, #ffffff, #24aa8b, #ffffff);
 }
 
-header{
-  background-color: #45ebb2;
+header {
     text-align: center;
+    padding-top: 40px;
 }
 
-input{
-    height: 3.5rem;
-    width: auto;
+h2 {
+    font-size: 35px;
+    font-family: 'Playball', cursive;
+    color: #173B9C;
+    padding-bottom: 20px;
 }
+
+input {
+    height: 40px;
+    width: auto;
+    border-radius: 12px;
+    border: solid 1px #173B9C;
+    background-color: #e8eded;
+}
+
+#myImput {
+    font-size: 60px;
+}
+
+
+.btn-sample {
+    color: #FFFFFF;
+    background-color: #173B9C;
+    border-color: #130269;
+    font-family: 'Playball', cursive;
+}
+
+.btn-sample:hover,
+.btn-sample:focus,
+.btn-sample:active,
+.btn-sample.active,
+.open .dropdown-toggle.btn-sample {
+    color: #FFFFFF;
+    background-color: #2e59cc;
+    border-color: #130269;
+}
+
+::-webkit-input-placeholder {
+    font-size: 14px;
+    opacity: 0.3;
+    font-style: italic;
+}
+
+

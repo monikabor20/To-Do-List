@@ -10,6 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style/stylesheet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
 
     <!-- Java-Script Files -->
     <script type="text/javascript" src="javascript/aplikacja.js"></script>
@@ -19,25 +20,24 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="main col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
                 <header>
                     <h2>Moja lista zadań</h2>
-                    <input type="text" id="myInput" placeholder="Zadania" class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                    <button type="button" onclick="dodajNowyElement()" class="btn btn-primary">Dodaj</button>
+                    <input type="text" id="myInput" placeholder="Zadania..." class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <button type="button" onclick="dodajNowyElement()" class="btn btn-sample">Dodaj</button>
                 </header>
             </div>
 
-            <ul id="myUl">
-            </ul>
+            <div class="row">
+                <div class="list col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    <ul id="myUl">
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </body>
 
 </html>
-
-
-
-
-
-
