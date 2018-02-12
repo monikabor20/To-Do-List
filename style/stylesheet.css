@@ -28,8 +28,8 @@ input {
 
 #myImput {
     font-size: 60px;
+    text-align: center;
 }
-
 
 .btn-sample {
     color: #FFFFFF;
@@ -54,4 +54,9 @@ input {
     font-style: italic;
 }
 
-
+.list{
+    margin-left: auto;
+    margin-right: auto;
+    word-wrap: normal;
+    
+}
