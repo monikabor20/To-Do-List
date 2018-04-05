@@ -3,43 +3,44 @@
 
 <head>
     <title>Aplikacja ToDo</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style/stylesheet.css" />
     <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-
-    <!-- Java-Script Files -->
-    <script type="text/javascript" src="javascript/aplikacja.js"></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style/stylesheet.css" />
 </head>
 
 <body>
     <div class="container">
         <div class="row">
             <div class="main col-12">
-
-                <header>
-                    <h2>Moja lista zadań</h2>
-                    <input type="text" id="myInput" placeholder="Zadania..." class="col-xs-8 col-sm-8 col-md-8 col-lg-8 mb-4 mb-sm-0">
-                    <button type="button" onclick="dodajNowyElement()" class="btn btn-sample">Dodaj</button>
-                </header>
+                <h3>Moja lista zadań</h3>
+                <p>
+                    <label for="new-task"></label>
+                    <input id="new-task" type="text">
+                    <button id="button-dodaj" class="btn btn-sample">Dodaj</button>
+                </p>
             </div>
         </div>
-
         <div class="row">
-            <div class="list col-xs-12 col-sm-12 col-md-8 col-lg-8 mt-lg-4 ">
-
-                <ul id="myUl">
+            <div class="main col-10 col-sm-10 col-md-8 col-lg-6 mx-auto">
+                <h3>Do zrobienia</h3>
+                <ul id="incomplete-tasks">
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="main col-12 col-10 col-sm-10 col-md-8 col-lg-6 mx-auto">
+                <h3>Zrobione</h3>
+                <ul id="completed-tasks">
                 </ul>
             </div>
         </div>
     </div>
-  
 </body>
+<script type="text/javascript" src="javascript/aplikacja.js"></script>
 
 </html>

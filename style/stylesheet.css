@@ -6,29 +6,36 @@ body {
     background: linear-gradient(to left, #ffffff, #24aa8b, #ffffff);
 }
 
-header {
+.main {
     text-align: center;
     padding-top: 40px;
 }
 
-h2 {
+.container{
+    max-width: 1200px;
+}
+
+h3 {
     font-size: 35px;
     font-family: 'Playball', cursive;
     color: #173B9C;
     padding-bottom: 20px;
-}
-
-input {
-    height: 40px;
-    width: auto;
-    border-radius: 12px;
-    border: solid 1px #173B9C;
-    background-color: #e8eded;
-}
-
-#myImput {
-    font-size: 60px;
     text-align: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li * {
+    float: left;
+}
+
+li,
+h3 {
+    clear: both;
+    list-style: none;
 }
 
 .btn-sample {
@@ -36,27 +43,69 @@ input {
     background-color: #173B9C;
     border-color: #130269;
     font-family: 'Playball', cursive;
+    cursor: pointer;
 }
 
-.btn-sample:hover,
-.btn-sample:focus,
-.btn-sample:active,
-.btn-sample.active,
-.open .dropdown-toggle.btn-sample {
-    color: #FFFFFF;
-    background-color: #2e59cc;
-    border-color: #130269;
+.btn-sample:hover {
+    color: #ffffff;
+    background-color: #3b66d9; 
+    transform: scale(1.1)
 }
 
-::-webkit-input-placeholder {
-    font-size: 14px;
-    opacity: 0.3;
-    font-style: italic;
+label[for='new-task'] {
+    display: block;
 }
 
-.list{
-    margin-left: auto;
-    margin-right: auto;
-    word-wrap: normal;
-    
+input#new-task {
+    width: 60%;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 30px;
+    padding-left: 30px;   
+    padding-right: 30px; 
+}
+
+li {
+    overflow: hidden;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+}
+
+li > input[type="checkbox"] {
+    margin: 0 10px;
+    position: relative;
+    top: 15px;
+}
+
+li > label {
+    font-size: 18px;
+    font-family: 'Yatra One', cursive;
+    line-height: 40px;
+    width: 50px;
+    padding: 0 0 0 11px;
+    }
+
+li > input[type="text"] {
+    width: 226px;
+}
+
+.delete{
+    float:right;
+    background-color: #fafafa;
+    color:#24aa8b;
+    border-radius: 10px;
+}
+
+.checkmark{
+   position: absolute;
+    height: 16px;
+    width: 16px;
+    background-color: #c62222;
+    border-radius: 50%;
+}
+
+#completed-tasks label {
+    text-decoration: line-through;
+    color: #888;
 }
