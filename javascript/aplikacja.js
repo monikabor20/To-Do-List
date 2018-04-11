@@ -79,3 +79,5 @@ for (var i = 0; i < completedTasksHolder.children.length; i++) {
     // bind events to list item's children (taskIncompleted)
     bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
 }
+
+}
