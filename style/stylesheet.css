@@ -11,7 +11,7 @@ body {
     padding-top: 40px;
 }
 
-.container{
+.container {
     max-width: 1200px;
 }
 
@@ -48,7 +48,7 @@ h3 {
 
 .btn-sample:hover {
     color: #ffffff;
-    background-color: #3b66d9; 
+    background-color: #3b66d9;
     transform: scale(1.1)
 }
 
@@ -61,8 +61,8 @@ input#new-task {
     height: 40px;
     margin-right: 20px;
     border-radius: 30px;
-    padding-left: 30px;   
-    padding-right: 30px; 
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 li {
@@ -84,21 +84,21 @@ li > label {
     line-height: 40px;
     width: 50px;
     padding: 0 0 0 11px;
-    }
+}
 
 li > input[type="text"] {
     width: 226px;
 }
 
-.delete{
-    float:right;
+.delete {
+    float: right;
     background-color: #fafafa;
-    color:#24aa8b;
+    color: #24aa8b;
     border-radius: 10px;
 }
 
-.checkmark{
-   position: absolute;
+.checkmark {
+    position: absolute;
     height: 16px;
     width: 16px;
     background-color: #c62222;

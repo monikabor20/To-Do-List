@@ -12,7 +12,6 @@ var createNewTaskElement = function (taskString) {
     var deleteButton = document.createElement("button");
 
     checkBox.type = "checkbox";
-    checkBox.className= "checkmark";
     deleteButton.className = "delete fas fa-check";
     label.innerText = taskString;
 
@@ -25,11 +24,15 @@ var createNewTaskElement = function (taskString) {
 
 // Dodaj zadanie
 var addTask = function () {
-    var listItem = createNewTaskElement(taskInput.value);
-    incompleteTasksHolder.appendChild(listItem);
-    bindTaskEvents(listItem, taskCompleted);
-
+    if (taskInput.value === "") {
+        alert("Uzupełnij dane");
+    } else {
+        var listItem = createNewTaskElement(taskInput.value);
+        incompleteTasksHolder.appendChild(listItem);
+        bindTaskEvents(listItem, taskCompleted);
+    }
     taskInput.value = "";
+
 }
 
 // Usuń zadanie
@@ -39,8 +42,9 @@ var deleteTask = function () {
     ul.removeChild(listItem);
 }
 
-// Przenieś wykonane zadanie do "Zrobione"
+// Przenień wykonane zadanie do "Zrobione"
 var taskCompleted = function () {
+    //Append the task list item to the #completed-tasks
     var listItem = this.parentNode;
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
@@ -78,6 +82,4 @@ for (var i = 0; i < incompleteTasksHolder.children.length; i++) {
 for (var i = 0; i < completedTasksHolder.children.length; i++) {
     // bind events to list item's children (taskIncompleted)
     bindTaskEvents(completedTasksHolder.children[i], taskIncomplete);
-}
-
 }
