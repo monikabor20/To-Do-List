@@ -22,14 +22,26 @@ var createNewTaskElement = function (taskString) {
     return listItem;
 }
 
+// When the user clicks on <div>, open the popup
+function showPopUp() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+
+function hidePopUp() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("hide");
+}
+
 // Dodaj zadanie
 var addTask = function () {
     if (taskInput.value === "") {
-        alert("Uzupełnij dane");
+        showPopUp();
     } else {
         var listItem = createNewTaskElement(taskInput.value);
         incompleteTasksHolder.appendChild(listItem);
         bindTaskEvents(listItem, taskCompleted);
+        hidePopUp();
     }
     taskInput.value = "";
 
