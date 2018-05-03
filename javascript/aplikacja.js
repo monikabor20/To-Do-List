@@ -1,10 +1,9 @@
-// Zdefiniuj zmienne 
 var taskInput = document.getElementById("new-task");
 var addButton = document.getElementById("button-dodaj");
 var incompleteTasksHolder = document.getElementById("incomplete-tasks");
 var completedTasksHolder = document.getElementById("completed-tasks");
 
-// Utwórz nowy task 
+
 var createNewTaskElement = function (taskString) {
     var listItem = document.createElement("li");
     var checkBox = document.createElement("input");
@@ -22,18 +21,11 @@ var createNewTaskElement = function (taskString) {
     return listItem;
 }
 
-// When the user clicks on <div>, open the popup
 function showPopUp() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
 }
 
-function hidePopUp() {
-    var popup = document.getElementById("myPopup");
-    popup.classList.toggle("hide");
-}
-
-// Dodaj zadanie
 var addTask = function () {
     if (taskInput.value === "") {
         showPopUp();
@@ -41,31 +33,27 @@ var addTask = function () {
         var listItem = createNewTaskElement(taskInput.value);
         incompleteTasksHolder.appendChild(listItem);
         bindTaskEvents(listItem, taskCompleted);
-        hidePopUp();
     }
     taskInput.value = "";
-
 }
 
-// Usuń zadanie
+
 var deleteTask = function () {
     var listItem = this.parentNode;
     var ul = listItem.parentNode;
     ul.removeChild(listItem);
 }
 
-// Przenień wykonane zadanie do "Zrobione"
+
 var taskCompleted = function () {
-    //Append the task list item to the #completed-tasks
+
     var listItem = this.parentNode;
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 }
 
-// Oznacz zadanenie jako niewykonane
 var taskIncomplete = function () {
-    // When checkbox is unchecked
-    // Append the task list item #incomplete-tasks
+
     var listItem = this.parentNode;
     incompleteTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);

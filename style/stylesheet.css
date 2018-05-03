@@ -133,7 +133,6 @@ li > input[type="text"] {
     margin-left: -80px;
 }
 
-
 .popup .popuptext::after {
     content: "";
     position: absolute;
@@ -150,11 +149,6 @@ li > input[type="text"] {
     -webkit-animation: fadeIn 2s;
     animation: fadeIn 2s;
 }
-
-.popup .hide {
-    display: none;
-}
-
 
 @-webkit-keyframes fadeIn {
     from {
